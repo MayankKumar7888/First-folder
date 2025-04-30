@@ -52,8 +52,8 @@
     font-size: clamp(1.5rem, 4vw + 1rem,5rem);
 }
 
-#a1{
-    top: 2rem;
+#textbox .work-btn{
+    top: 3rem;
     background-color: white;
     border-top-right-radius: 40px;
     border-bottom-left-radius: 40px;
@@ -62,9 +62,12 @@
     padding: 10px 20px;
     box-shadow: 4px 10px 5px #D9FF00;
     border-color: #D9FF00;
-}
-
-#exampleFormControlInput1, #exampleFormControlTextarea1, #exampleFormControlTextarea2{
+    text-decoration: none;
+    font-weight: bold;
+    color: black; 
+    border: 2px solid #D9FF00;
+    }
+#exampleFormControlTextarea1, #exampleFormControlInput1, #exampleFormControlInput2{
     border-color: #D9FF00;
 }
 
@@ -72,7 +75,6 @@
     color: #D9FF00;
 }
 
-#exampleFormControlInput1::placeholder ,#exampleFormControlTextarea1::placeholder, #exampleFormControlTextarea2::placeholder{
+#exampleFormControlInput1::placeholder ,#exampleFormControlInput2::placeholder ,#exampleFormControlTextarea1::placeholder{
     color: white;
 }
-
