@@ -1,0 +1,161 @@
+#body{
+  background-color: black;
+}
+
+.navbar{
+  background-color: black;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute !important;
+  z-index: 2;
+  top: 56px;
+  right: 0;
+  left: 0;
+}
+
+#textbox{
+  height: 100vh;
+  object-fit: cover;
+  background: linear-gradient(0deg, rgba(0,0,0,0.7) 100%, rgba(0,0,0,0.7) 100%),url(img/bussiness-meeting.jpeg);
+  background-size: cover;
+  background-position: center center;
+  align-items: center;
+  place-items: center;
+  position: relative;
+  z-index: 0;
+}
+
+#textbox .innerbox{
+  padding: 1vh 3vw;
+  top: 56px;
+}
+
+#li4{
+    background-color: #D9FF00;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 1;
+}
+
+#textbox .work-btn, #make-brand .work-btn, #discovery-call .work-btn{
+  top: 3rem;
+  background-color: white;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 4px 10px 5px #D9FF00;
+  border-color: #D9FF00;
+  text-decoration: none;
+  font-weight: bold;
+  color: black; 
+  border: 2px solid #D9FF00;
+}
+#footer-detail .work-btn2{
+  top: 3rem;
+  background-color: white;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 4px 10px 5px #D9FF00,
+              4px 10px 10px black;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  border: 2px solid #D9FF00;
+}
+
+#brand-img1, #brand-img2, #brand-img3, #brand-section .brand-img4{
+  border: 2px solid white;
+  border-radius: 40px;
+}
+
+#discovery-call-box, #discovery-call-imgbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+#discovery-call-imgbox img{
+    border-top-right-radius: 160px;
+}
+
+.accordion-item, #accordion-button-1,#accordion-button-2, #accordion-button-3, #accordion-button-4, #accordion-button-5, .accordion-body, .accordion-header{
+  background-color: black;
+  color: white;
+}
+
+#accordion-button-1::after,#accordion-button-2::after,#accordion-button-3::after,#accordion-button-4::after,#accordion-button-5::after{
+  display: none;
+}
+
+.accordion-button-icon{
+  color: #D9FF00;
+}
+
+
+
+#make-brand{
+  color: white;
+  text-align: center;
+}
+
+#footer-detail, #footer{
+  background-color: #D9FF00;
+}
+
+#footer, #footer-pages a, #link-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer-pages a{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  gap: 220px;
+  text-decoration: none;
+  color: black;
+}
+
+
+#link-box p{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+#footer-about {
+font-weight: 300;
+font-size: 22px;
+line-height: 120%;
+text-align: center;
+}
+
+#footer-about .footer-about-name{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+  text-align: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
