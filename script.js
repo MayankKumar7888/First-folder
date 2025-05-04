@@ -160,8 +160,8 @@ document.getElementById('themeToggle').addEventListener('click', function() {
 });
 
 if (localStorage.getItem('darkMode') === 'true') {
-  document.body.classList.add('dark-mode');
-}
+    document.body.classList.add('dark-mode');
+  }
 
 
 
@@ -334,6 +334,20 @@ MenuToggle.addEventListener('click', function(event) {
 
 const logoElement = document.getElementById('logo');
 
+// document.getElementById('styleSelector').addEventListener('change', function() {
+//     const selectedStyle = this.value;
+//     document.body.className = selectedStyle;
+    
+//     if (selectedStyle === 'zerodha') {
+//         logoElement.textContent = 'Zerodha';
+//     } else if (selectedStyle === 'motilal') {
+//         logoElement.textContent = 'Motilal Oswal';
+//     }
+    
+//     updateVisibility();
+//     updateChartTheme();
+// });
+
 document.getElementById('styleSelector').addEventListener('change', function() {
     const selectedStyle = this.value;
     document.body.className = selectedStyle;
@@ -343,7 +357,9 @@ document.getElementById('styleSelector').addEventListener('change', function() {
     } else if (selectedStyle === 'motilal') {
         logoElement.textContent = 'Motilal Oswal';
     }
-    
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+      }
     updateVisibility();
     updateChartTheme();
 });
