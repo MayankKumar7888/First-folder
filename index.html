@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="sidebar">
+            <ul>
+                <li>
+                    <span class="logo">TradePro</span>
+                    <button onclick="toggleSidebar()" id="toggle-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m242-200 200-280-200-280h98l200 280-200 280h-98Zm238 0 200-280-200-280h98l200 280-200 280h-98Z"/></svg>
+                    </button>
+                </li>
+                <li class="active">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"/></svg>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M560-320h80v-80h80v-80h-80v-80h-80v80h-80v80h80v80ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Z"/></svg>
+                        <span>Create</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </button>
+                    <ul class="sub-menu">
+                        <div>
+                        <li><a href="#">Folder</a></li>
+                        <li><a href="#">Document</a></li>
+                        <li><a href="#">Project</a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M222-200 80-342l56-56 85 85 170-170 56 57-225 226Zm0-320L80-662l56-56 85 85 170-170 56 57-225 226Zm298 240v-80h360v80H520Zm0-320v-80h360v80H520Z"/></svg>
+                    <span>Todo lists</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </button>
+                    <ul class="sub-menu">
+                        <div>
+                        <li><a href="#">Folder</a></li>
+                        <li><a href="#">Document</a></li>
+                        <li><a href="#">Project</a></li>
+                        <li><a href="#">Folder</a></li>
+                        <li><a href="#">Document</a></li>
+                        <li><a href="#">Project</a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"/></svg>
+                        <span>Calendar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+                        <span>Profile</span>
+                    </a>
+                </li>
+            </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <!-- header start -->
+            <header>
+                <div class="logo" id="logo">Zerodha</div>
+                <div style="display: flex; align-items: center; gap: 15px;" class="header-box">
+                    <div class="style-selector">
+                        <select id="styleSelector">
+                            <option value="zerodha">Zerodha</option>
+                            <option value="motilal">Motilal Oswal</option>
+                        </select>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle">🌓</button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" style="display: none;">☰</button>
+                </div>
+            </header>
+            <!-- header end -->
+
+
+            <div class="dashboard-grid">
+                <!-- zerodha section start -->
+                <div class="zerodha-content">
+                    <div class="card">
+                        <div class="card-title">NIFTY 50</div>
+                        <div class="price">22,245.50</div>
+                        <div class="change positive">+125.75 (0.57%)</div>
+                    </div>
+        
+                    <div class="card">
+                        <div class="card-title">SENSEX</div>
+                        <div class="price">73,648.62</div>
+                        <div class="change positive">+363.16 (0.50%)</div>
+                    </div>
+        
+                    <div class="card">
+                        <div class="card-title">BANK NIFTY</div>
+                        <div class="price">47,832.40</div>
+                        <div class="change negative">-87.25 (0.18%)</div>
+                    </div>
+        
+                    <div class="card">
+                        <div class="card-title">INDIA VIX</div>
+                        <div class="price">13.25</div>
+                        <div class="change negative">-0.75 (5.36%)</div>
+                    </div>
+        
+                    <!-- Portfolio Summary Start -->
+                    <div class="card wide">
+                        <div class="card-title">PORTFOLIO</div>
+                        <div style="display: flex; justify-content: space-between;" class="portfolio-update">
+                            <div>
+                                <div>Current Value</div>
+                                <div class="price">₹1,24,567.89</div>
+                            </div>
+                            <div>
+                                <div>Today's P&L</div>
+                                <div class="price positive">+₹2,345.67</div>
+                            </div>
+                            <div>
+                                <div>Total P&L</div>
+                                <div class="price positive">+₹12,456.78</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio Summary End -->
+        
+                    <!-- Watchlist Start -->
+                    <div class="card wide">
+                        <div class="card-title">WATCHLIST</div>
+                        <ul class="watchlist">
+                            <li class="watchlist-item">
+                                <span>RELIANCE</span>
+                                <span>₹2,845.60 <span class="change positive">+1.2%</span></span>
+                            </li>
+                            <li class="watchlist-item">
+                                <span>TATASTEEL</span>
+                                <span>₹145.25 <span class="change negative">-0.8%</span></span>
+                            </li>
+                            <li class="watchlist-item">
+                                <span>HDFCBANK</span>
+                                <span>₹1,456.80 <span class="change positive">+0.5%</span></span>
+                            </li>
+                            <li class="watchlist-item">
+                                <span>INFY</span>
+                                <span>₹1,567.30 <span class="change positive">+1.8%</span></span>
+                            </li>
+                            <li class="watchlist-item">
+                                <span>ICICIBANK</span>
+                                <span>₹1,023.45 <span class="change negative">-0.3%</span></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Watchlist End -->
+        
+                    <!-- Chart Start -->
+                    <div class="chartbox card" id="chart1"></div>
+                    <!-- Chart End -->
+                </div>
+                <!-- zerodha section end -->
+
+                <!-- Motilal Oswal Content Start -->
+                <div class="motilal-content" style="display: none;">
+
+                    <!-- Market Overview Start -->
+                    <div class="market-overview">
+                        <div class="market-card">
+                            <div class="name">NIFTY 50</div>
+                            <div class="price">22,245.50</div>
+                            <div class="change positive">+125.75 (0.57%)</div>
+                        </div>
+                        <div class="market-card">
+                            <div class="name">SENSEX</div>
+                            <div class="price">73,648.62</div>
+                            <div class="change positive">+363.16 (0.50%)</div>
+                        </div>
+                        <div class="market-card">
+                            <div class="name">BANK NIFTY</div>
+                            <div class="price">47,832.40</div>
+                            <div class="change negative">-87.25 (0.18%)</div>
+                        </div>
+                        <div class="market-card">
+                            <div class="name">INDIA VIX</div>
+                            <div class="price">13.25</div>
+                            <div class="change negative">-0.75 (5.36%)</div>
+                        </div>
+                    </div>
+                    <!-- Market Overview End -->
+
+                    <!-- Portfolio Summary Start -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Portfolio Summary</div>
+                            <div class="view-all">View Details</div>
+                        </div>
+                        <div class="portfolio-summary">
+                            <div class="portfolio-metric">
+                                <div class="label">Current Value</div>
+                                <div class="value">₹1,24,567.89</div>
+                            </div>
+                            <div class="portfolio-metric">
+                                <div class="label">Today's P&L</div>
+                                <div class="value positive">+₹2,345.67</div>
+                            </div>
+                            <div class="portfolio-metric">
+                                <div class="label">Total P&L</div>
+                                <div class="value positive">+₹12,456.78</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tabs">
+                        <div class="tab active" data-tab="research">Research Reports</div>
+                        <div class="tab" data-tab="news">Market News</div>
+                        <div class="tab" data-tab="analysis">Portfolio Analysis</div>
+                    </div>
+                    <!-- Portfolio Summary End -->
+
+                    <!-- Research Start -->
+                    <div class="tab-content active" id="research">
+                        <div class="card research-section">
+                            <div class="card-header">
+                                <div class="card-title">Latest Research</div>
+                                <div class="view-all">View All</div>
+                            </div>
+                            <div class="research-list">
+                                <div class="research-item">
+                                    <div class="title">Banking Sector Outlook - Q2 2023</div>
+                                    <div class="meta">
+                                        <span>Equity Research</span>
+                                        <span>Oct 15, 2023</span>
+                                    </div>
+                                    <div class="summary">
+                                        We maintain our positive stance on the banking sector with ICICI Bank and HDFC Bank as our top picks. NIMs expected to stabilize despite margin pressures.
+                                    </div>
+                                </div>
+                                <div class="research-item">
+                                    <div class="title">IT Sector - Growth Moderates but Valuations Attractive</div>
+                                    <div class="meta">
+                                        <span>Sector Report</span>
+                                        <span>Oct 12, 2023</span>
+                                    </div>
+                                    <div class="summary">
+                                        While growth has moderated from pandemic highs, valuations now appear reasonable with TCS and Infosys trading below 5-year average PE.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Research End -->
+
+                    <!-- News Start -->
+                    <div class="tab-content" id="news">
+                        <div class="card news-section">
+                            <div class="card-header">
+                                <div class="card-title">Market News</div>
+                                <div class="view-all">View All</div>
+                            </div>
+                            <div class="news-list">
+                                <div class="news-item">
+                                    <div class="title">RBI keeps repo rate unchanged at 6.5%</div>
+                                    <div class="source">Economic Times</div>
+                                    <div class="time">2 hours ago</div>
+                                </div>
+                                <div class="news-item">
+                                    <div class="title">Infosys reports Q2 results: Net profit up 3% QoQ</div>
+                                    <div class="source">Business Standard</div>
+                                    <div class="time">4 hours ago</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- News End -->
+
+                    <!-- Portfolio Analysis Start -->
+                    <div class="tab-content" id="analysis">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">Portfolio Analysis</div>
+                                <div class="view-all">Detailed Report</div>
+                            </div>
+                            <div class="analysis-box">
+                                <div class="analysis-data">
+                                    <h3>Portfolio Analysis</h3>
+                                    <p>Motilal Oswal's portfolio analysis focuses on high-conviction, research-backed stock selection, typically holding 15-25 quality stocks with heavy weights in sectors like financials and technology. Their portfolios emphasize long-term wealth creation, supported by strong alpha (14.8% 1Y), low beta (0.68), and a high Sharpe ratio (3.32). Key features include sectoral diversification (large/mid/small-cap mix), QRC (Quality-Risk-Consistency) scoring, and transparent demat holdings, making it ideal for investors seeking actively managed, tax-efficient equity strategies.</p>
+                                    <a href="#">read more</a>
+                                </div>
+                                <div class="analysis-img" style="color: #666;"><img src="analysis-expert.png" alt="analysis"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio Analysis End -->
+                </div>
+                <!-- Motilal Oswal Content End -->
+            </div>
+        </div>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
